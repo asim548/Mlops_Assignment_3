@@ -1,0 +1,9 @@
+apache-airflow==2.9.1
+apache-airflow-providers-postgres
+pandas
+requests
+dvc
+dvc[ssh]
+psycopg2-binary
+sqlalchemy
+python-dotenv

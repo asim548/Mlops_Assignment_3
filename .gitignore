@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+venv/
+
+# Airflow local files
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/logs/
+
+# DVC cache
+.dvc/cache/
+.dvc/tmp/
+
+# Data files
+data/raw/
+data/processed/*.csv
+
+# Environment variables
+.env
+
+# Docker
+*.log
