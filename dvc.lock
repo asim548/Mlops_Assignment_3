@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  transform:
+    cmd: python airflow/plugins/scripts/transform_apod.py
+    deps:
+    - path: airflow/plugins/scripts/transform_apod.py
+      hash: md5
+      md5: 0bbb12ee253b8201589cacf5ecf3f42f
+      size: 1833
+    - path: data/raw/apod_raw_date.json
+      hash: md5
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+    outs:
+    - path: data/processed/apod_data.csv
+      hash: md5
+      md5: f3dff3c5b979dd0177beec0059307c77
+      size: 1210

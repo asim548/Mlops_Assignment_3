@@ -1,0 +1,19 @@
+{
+    "step": "Data Loading",
+    "timestamp": "2025-11-16T16:14:01.894908",
+    "records_loaded": 1,
+    "table_name": "apod",
+    "columns": [
+        "date",
+        "title",
+        "url",
+        "explanation",
+        "media_type"
+    ],
+    "status": "success",
+    "storage_locations": {
+        "postgresql": "apod table in airflow database",
+        "csv": "data\\processed\\apod_data.csv",
+        "backup": "data/processed/apod_data_backup.csv"
+    }
+}

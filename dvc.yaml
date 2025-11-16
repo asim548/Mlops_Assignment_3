@@ -1,0 +1,24 @@
+stages:
+  extract:
+    cmd: python airflow/plugins/scripts/extract_apod.py
+    deps:
+      - airflow/plugins/scripts/extract_apod.py
+    outs:
+      - data/raw/apod_raw_date.json:
+          desc: Raw APOD data from NASA API
+
+  transform:
+    cmd: python airflow/plugins/scripts/transform_apod.py
+    deps:
+      - data/raw/apod_raw_date.json
+      - airflow/plugins/scripts/transform_apod.py
+    outs:
+      - data/processed/apod_data.csv:
+          desc: Processed APOD data in CSV format
+
+  load:
+    cmd: python airflow/plugins/scripts/load_to_postgres.py
+    deps:
+      - data/processed/apod_data.csv
+      - airflow/plugins/scripts/load_to_postgres.py
+    desc: Load data into PostgreSQL database
